@@ -1,0 +1,10 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: datadog-agent-config-crio
+  namespace: datadog-agent
+data:
+  cri: |-
+    init_config:
+    instances:
+      - prometheus_url: http://localhost:9537/metrics
